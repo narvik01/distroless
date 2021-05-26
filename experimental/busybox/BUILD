@@ -10,9 +10,7 @@ load(":commands.bzl", "BUSYBOX_COMMANDS")
     srcs = ["@busybox_" + arch + "//file"],
     outs = ["busybox_" + arch + ".tar"],
     cmd = "mkdir busybox; cp $(<) busybox/busybox; cd busybox; \
-           #if [[ $(<) == *ppc64le* ]]; then \
-             tar -xf busybox ./bin && mv -f ./bin/busybox . && rm -rf ./bin; \
-           #fi; \
+	   tar -xf busybox ./bin && mv -f ./bin/busybox . && rm -rf ./bin; \
            for cmd in %s; do \
              ln -s busybox $$cmd; \
            done; \
