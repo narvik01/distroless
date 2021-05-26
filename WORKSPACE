@@ -249,8 +249,8 @@ http_archive(
 http_file(
     name = "busybox_amd64",
     executable = True,
-    sha256 = "5901878aed48f3d88e4198b1bbee9466da0d53c4687a95c178172eaeadd6b426",
-    urls = ["https://github.com/docker-library/busybox/raw/dist-amd64/stable/glibc/busybox.tar.xz"],
+    sha256 = "ca87524fbd15d9878b6bcae943c5a92f05f6f8866756051bbd434a2028fa9b9d",
+    urls = ["https://github.com/docker-library/busybox/raw/6a3fa4f3ee1437da18f6f017b75e7799b1ae910b/stable/glibc/busybox.tar.xz"],
 )
 
 http_file(
